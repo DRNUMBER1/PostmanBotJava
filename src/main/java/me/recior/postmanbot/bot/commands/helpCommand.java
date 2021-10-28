@@ -38,7 +38,7 @@ public class helpCommand extends Command {
 
         // Defining embedded builder.
         EmbedBuilder eb = new EmbedBuilder();
-
+//embed titles
         eb.setTitle("Postman Bot help Menu.");
         eb.setDescription("Welcome to Postman Bot help Menu!, All my commands Start with ");
         eb.addField("Commands\n","``+" + result + "``",false);
