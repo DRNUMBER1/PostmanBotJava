@@ -3,24 +3,33 @@ package me.recior.postmanbot.bot;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
-import org.jetbrains.annotations.NotNull;
 
-
+/*
+ *Worst code :D
+ *
+ *
+ */
 public abstract class Command{
 
     String name;
     String description;
 
-   public Command(String name, String description) { this.name = name; this.description = description; ;  }
+    //Command basic information, registers name and description.
+    //TODO add other information... {permissions, allies, etc...}
+   public Command(String name, String description) { this.name = name; this.description = description; }
 
+    //returns name of (this)object.
     public String getName(){
         return this.name;
     }
 
+    //returns description of (this)object.
     public String getDescription(String description){
         return this.description;
     }
 
-    public void call(@NotNull Member member, TextChannel textChannel, Message message) {}
+    //some cool code I wrote ;)), calls the command.... idk why I didn't just use Message received event...
+    //TODO add more params......
+    public void call(Member member, TextChannel textChannel, Message message) {}
 
 }
