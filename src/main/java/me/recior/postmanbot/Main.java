@@ -16,7 +16,11 @@ public class Main {
 
     public static void main(String[] args) throws LoginException {
 
-        String protect = System.getenv("tk");
+        //uncomment this and replace tk with the token String in eviornment(idk spelling) variable ;P
+        //String protect = System.getenv("tk");
+        
+        //or just put this,, who cares
+        String protect = "nudes";
 
         JDA jda = JDABuilder.createDefault(protect).build();
         jda.addEventListener(new MessageL());
