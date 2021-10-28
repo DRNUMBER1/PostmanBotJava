@@ -3,6 +3,7 @@ package me.recior.postmanbot.bot;
 import java.util.ArrayList;
 import java.util.List;
 
+//ok
 public class  CommandUtil {
 
     //Defining list of commands
