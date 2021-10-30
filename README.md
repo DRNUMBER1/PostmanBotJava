@@ -6,4 +6,8 @@
 
 _This is soooo_
 
+## Credits
+Please visit: https://github.com/DV8FromTheWorld/JDA
+uwu
+
 **This bot was made for postman discord server join it here: https://discord.gg/gEz3yG75fF**
