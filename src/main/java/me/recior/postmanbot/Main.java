@@ -1,14 +1,14 @@
 package me.recior.postmanbot;
 
-import me.recior.postmanbot.bot.CommandRegisterer;
+import me.recior.postmanbot.bot.util.CommandRegisterer;
 import me.recior.postmanbot.bot.MessageL;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Activity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.security.auth.login.LoginException;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -32,7 +32,7 @@ public class Main {
         //go figure out yourself >:) about this token thing
         Scanner sc = new Scanner(f);
         String token = sc.nextLine();
-        JDA jda = JDABuilder.createDefault(token).build();
+        JDA jda = JDABuilder.createDefault(token).setActivity(Activity.playing("Postman++ | +help")).build();
         jda.addEventListener(new MessageL());
         sc.close();
 

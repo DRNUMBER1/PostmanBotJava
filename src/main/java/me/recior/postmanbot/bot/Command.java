@@ -1,8 +1,6 @@
 package me.recior.postmanbot.bot;
 
-import net.dv8tion.jda.api.entities.Member;
-import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.TextChannel;
+import me.recior.postmanbot.bot.util.Cmd;
 
 /*
  *Worst code :D
@@ -13,10 +11,10 @@ public abstract class Command{
 
     String name;
     String description;
+    String[] allies;
 
     //Command basic information, registers name and description.
-    //TODO add other information... {permissions, allies, etc...}
-   public Command(String name, String description) { this.name = name; this.description = description; }
+   public Command(String name, String description, String[] allies) { this.name = name; this.description = description; this.allies = allies; }
 
     //returns name of (this)object.
     public String getName(){
@@ -24,12 +22,15 @@ public abstract class Command{
     }
 
     //returns description of (this)object.
-    public String getDescription(String description){
+    public String getDescription(){
         return this.description;
     }
 
+    //returns allies of (this)object
+    public String[] getAllies() { return this.allies;}
+
     //some cool code I wrote ;)), calls the command.... idk why I didn't just use Message received event...
     //TODO add more params......
-    public void call(Member member, TextChannel textChannel, Message message) {}
+    public void call(Cmd Command) {}
 
 }
