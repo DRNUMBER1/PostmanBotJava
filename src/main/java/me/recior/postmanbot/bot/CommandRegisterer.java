@@ -15,7 +15,11 @@ public class CommandRegisterer{
         CommandUtil.registerCommand(new sizeCommand());
 
         //Logging every cmd for registering, doesn't work but still works /shrug
-        CommandUtil.cmds.forEach(c -> Main.log.info("Registered " + c.getName() + " Command!"));
+         int i;
+        for(i = 0; i < CommandUtil.cmds.size(); i++){
+           String n = CommandUtil.cmds.get(i).getName();
+           Main.log.info("Registered " + n + " Command!");
+        }
     }
 
 

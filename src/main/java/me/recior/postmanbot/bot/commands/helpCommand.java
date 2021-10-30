@@ -30,9 +30,13 @@ public class helpCommand extends Command {
         //Defining contents of field.
         StringJoiner sj = new StringJoiner("``+");
 
+        //
+
         //iterating over the commands
-        for (Command element : CommandUtil.cmds) {
-            sj.add(element.getName() + ",");
+        int i;
+        for (i = 0; i < CommandUtil.cmds.size(); i++) {
+            // ``+element``,
+            sj.add(CommandUtil.cmds.get(i).getName() + "``,");
         }
         String result = sj.toString();
 
@@ -41,7 +45,7 @@ public class helpCommand extends Command {
 //embed titles
         eb.setTitle("Postman Bot help Menu.");
         eb.setDescription("Welcome to Postman Bot help Menu!, All my commands Start with +");
-        eb.addField("Commands\n", "``+" + result + "``",false);
+        eb.addField("Commands\n", "``+" + result,false);
 
 
        textChannel.sendMessageEmbeds(eb.build()).queue();

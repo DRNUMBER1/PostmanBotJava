@@ -34,12 +34,13 @@ public class MessageL extends ListenerAdapter {
         String command = args[0].toLowerCase().substring(1);
 
         //executing if found else will do nothing /shrug
-        //TODO make it better.
-        CommandUtil.cmds.forEach(f ->{
-            String cmdName = f.getName();
-            if(command.equals(cmdName)){
-                f.call(m,t,ms);
+        int i;
+        for(i = 0; i < CommandUtil.cmds.size(); i++){
+            String n = CommandUtil.cmds.get(i).getName();
+            if(command.equals(n)){
+                CommandUtil.cmds.get(i).call(m,t,ms);
             }
-        });
+        }
+
     }
 }

@@ -27,7 +27,7 @@ public class sizeCommand extends Command {
         int range = max - min + 1;
 
         //why not?
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 1; i++) {
             int rand = (int) (Math.random() * range) + min;
             if(rand < 7)
                 textChannel.sendMessage("Hey " + name + " your size is " + rand + "// Lmao your small kiddo. Go watch some hentai.").queue();
