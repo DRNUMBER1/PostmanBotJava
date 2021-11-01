@@ -31,7 +31,7 @@ public class size extends Command {
             if(rand < 7)
                 c.getChannel().sendMessage("Hey " + name + " not alot of people agree with you, onlu " + rand + "does // Lmao, not based.").queue();
             else {
-                c.getChannel().sendMessage("Hey " + name + " people agree and theyre " + rand + "// very based fellow i see.").queue();
+                c.getChannel().sendMessage("Hey " + name + " people agree and theyre " + rand + " people strong // very based fellow i see.").queue();
             }
         }
     }
