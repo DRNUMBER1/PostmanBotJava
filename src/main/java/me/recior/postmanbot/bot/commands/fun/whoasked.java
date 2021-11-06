@@ -10,7 +10,7 @@ import me.recior.postmanbot.bot.util.Cmd;
 * I made this during school, i find it funny
 *
 * */
-public class size extends Command {
+public class whoasked extends Command {
 
     //registering....
     public size() {
